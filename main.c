@@ -52,6 +52,11 @@ int main(int argc, char* argv[]) {
         printf("  %s: %s\n", ipver, ipstr);
     }
 
+    //Getting hostname
+    char* hostname;
+    int size = 128;
+    printf("This host is called: %s.\n",gethostname(hostname, size));
+
     freeaddrinfo(res); // free the linked list
 
     return 0;
